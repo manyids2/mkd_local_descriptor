@@ -15,7 +15,7 @@ class MKD(nn.Module):
                  do_l2=True,
                  do_final_l2=True,
                  do_gmask=True,
-                 device='cuda'):
+                 device='cpu'):
         super().__init__()
 
         self.patch_size = patch_size

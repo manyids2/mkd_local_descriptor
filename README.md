@@ -14,13 +14,13 @@ patch_size = 64
 
 mkd = mm.MKD(dtype='concat',
              patch_size=patch_size,
-             whitening='lw',
+             whitening=None,
              training_set='liberty',
              reduce_dims=128,
              do_l2=True,
              do_final_l2=True,
              do_gmask=True,
-             device='cuda')
+             device='cpu')
 
 patches = torch.rand(12, 1, patch_size, patch_size)
 descs = mkd(patches)
