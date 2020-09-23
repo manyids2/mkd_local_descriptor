@@ -8,7 +8,7 @@ setuptools.setup(
     version="1.0.2",
     author="Arun Mukundan",
     author_email="arun.mukundan@gmail.com",
-    description="A small example package",
+    description="Multiple kernel local descriptors.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/manyids2/mkd_local_descriptor",
