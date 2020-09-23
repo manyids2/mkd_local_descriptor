@@ -101,6 +101,7 @@ Extraction times for 1024 batches on GPU (Nvidia Tesla P100).
 |    32    | 1024     | 17.26        |
 
 ## Bibliography
+
   Please cite :
 ```
   @article{mukundan2017multiple,
