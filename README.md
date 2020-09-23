@@ -84,21 +84,21 @@ Evaluated on the [brown_phototour_revisited benchmark](https://github.com/ducha-
 
 Times for extraction of 1024 batches on Tesla P100 (16GB).
 
-patch_size | batch_size | time(seconds)
-:--------: | :--------: | :-------:
-    64     | 64         |  8.96
-    64     | 128        | 10.50
-    64     | 256        | 19.15
-    64     | 512        | 36.98
-    64     | 1024       | 72.81
+patch_size|batch_size| time(seconds)|
+:--------:|:--------:|:------------:|
+    64    | 64       |  8.96        |
+    64    | 128      | 10.50        |
+    64    | 256      | 19.15        |
+    64    | 512      | 36.98        |
+    64    | 1024     | 72.81        |
 
-patch_size | batch_size | time(seconds)
-:--------: | :--------: | :-------:
-    32     | 64         |  5.93
-    32     | 128        |  4.21
-    32     | 256        |  5.67
-    32     | 512        |  9.12
-    32     | 1024       | 17.26
+patch_size|batch_size| time(seconds)|
+:--------:|:--------:|:------------:|
+    32    | 64       |  5.93        |
+    32    | 128      |  4.21        |
+    32    | 256      |  5.67        |
+    32    | 512      |  9.12        |
+    32    | 1024     | 17.26        |
 
 ## Bibliography
   Please cite :
