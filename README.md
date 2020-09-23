@@ -6,6 +6,12 @@ Includes whitening models learned on PhotoTourism dataset, supervised and unsupe
 ## Installation
 `pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.2.tar.gz`
 
+- Tested with
+  - Python 3.7.4
+  - pytorch==1.5.0
+  - cuda 10.1 (Cuda compilation tools, release 10.1, V10.1.243)
+  - Nvidia Tesla P100
+
 ## Usage
 
 *NOTE* Uses the 'pcawt' version (unsupervised whitening with attenuation) as default as it generalizes better. However, the 'lw' (learned whitening) performs better on PhotoTourism benchmark.
@@ -84,21 +90,21 @@ Evaluated on the [brown_phototour_revisited benchmark](https://github.com/ducha-
 
 Extraction times for 1024 batches on GPU (Nvidia Tesla P100).
 
-|patch_size|batch_size| time(seconds)|
-|:--------:|:--------:|:------------:|
-|    64    | 64       |  8.96        |
-|    64    | 128      | 10.50        |
-|    64    | 256      | 19.15        |
-|    64    | 512      | 36.98        |
-|    64    | 1024     | 72.81        |
+|patch_size|batch_size| time(seconds)| ms per patch
+|:--------:|:--------:|:------------:|:-----------:
+|    64    | 64       |  8.96        | 13.67e-2
+|    64    | 128      | 10.50        |  8.01e-2
+|    64    | 256      | 19.15        |  7.30e-2
+|    64    | 512      | 36.98        |  7.05e-2
+|    64    | 1024     | 72.81        |  6.94e-2
 
-|patch_size|batch_size| time(seconds)|
-|:--------:|:--------:|:------------:|
-|    32    | 64       |  5.93        |
-|    32    | 128      |  4.21        |
-|    32    | 256      |  5.67        |
-|    32    | 512      |  9.12        |
-|    32    | 1024     | 17.26        |
+|patch_size|batch_size| time(seconds)| ms per patch
+|:--------:|:--------:|:------------:|:---------:
+|    32    | 64       |  5.93        |  9.04e-2
+|    32    | 128      |  4.21        |  3.21e-2
+|    32    | 256      |  5.67        |  2.16e-2
+|    32    | 512      |  9.12        |  1.73e-2
+|    32    | 1024     | 17.26        |  1.64e-2
 
 ## Bibliography
 
