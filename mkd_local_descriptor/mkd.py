@@ -9,7 +9,7 @@ from .layers import Gradients, EmbedGradients, ExplicitSpacialEncoding, L2Norm
 class MKD(nn.Module):
     def __init__(self, dtype='concat',
                  patch_size=32,
-                 whitening=None,
+                 whitening='pcawt',
                  training_set='liberty',
                  reduce_dims=128,
                  do_l2=True,
