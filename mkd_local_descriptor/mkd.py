@@ -33,7 +33,7 @@ class MKD(nn.Module):
         self.model_file = model_file
         if self.model_file is None:
             this_dir, _ = os.path.split(__file__)
-            data_path = os.path.join(this_dir, 'mkd-concat-pt.pkl')
+            data_path = os.path.join(this_dir, f'mkd-{dtype}-{patch_size}.pkl')
             self.model_file = data_path
 
         self.grads = Gradients(patch_size=patch_size,

@@ -1,1 +1,2 @@
-include mkd_local_descriptor/mkd-concat-pt.pkl
+include mkd_local_descriptor/mkd-concat-32.pkl
+include mkd_local_descriptor/mkd-concat-64.pkl
