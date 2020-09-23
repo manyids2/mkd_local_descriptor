@@ -1,0 +1,5 @@
+dist
+build
+__pycache__
+mkd_local_descriptor.egg-info
+cleanup.sh
