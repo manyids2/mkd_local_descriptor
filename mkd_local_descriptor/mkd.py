@@ -10,8 +10,7 @@ class MKD(nn.Module):
     def __init__(self, dtype='concat',
                  patch_size=32,
                  whitening=None,
-                 model_file=None,
-                 training_set=None,
+                 training_set='liberty',
                  reduce_dims=128,
                  do_l2=True,
                  do_final_l2=True,
@@ -30,11 +29,13 @@ class MKD(nn.Module):
         self.in_shape = [-1, 1, patch_size, patch_size]
         self.dtype = dtype
 
-        self.model_file = model_file
-        if self.model_file is None:
-            this_dir, _ = os.path.split(__file__)
-            data_path = os.path.join(this_dir, f'mkd-{dtype}-{patch_size}.pkl')
-            self.model_file = data_path
+        # Use the correct model_file.
+        this_dir, _ = os.path.split(__file__)
+        if patch_size in [32, 64]:
+            _patch_size = patch_size
+        else:
+            _patch_size = 32 if abs(patch_size - 32) < abs(patch_size - 64) else 64
+        self.model_file = os.path.join(this_dir, f'mkd-{dtype}-{patch_size}.pkl')
 
         self.grads = Gradients(patch_size=patch_size,
                                do_smoothing=True,
@@ -156,4 +157,3 @@ def torch_xform_data(data, wh_model, xform, keval=40, t=0.7, reduce_dims=128):
     data = L2Norm()(data)
 
     return data
-
