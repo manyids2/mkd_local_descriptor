@@ -82,7 +82,7 @@ Evaluated on the [brown_phototour_revisited benchmark](https://github.com/ducha-
 
 ## Extraction times
 
-Times for extraction of 1024 batches on Tesla P100 (16GB).
+Extraction times for 1024 batches on GPU (Nvidia Tesla P100).
 
 patch_size|batch_size| time(seconds)|
 :--------:|:--------:|:------------:|
