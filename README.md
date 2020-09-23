@@ -84,30 +84,30 @@ Evaluated on the [brown_phototour_revisited benchmark](https://github.com/ducha-
 
 Extraction times for 1024 batches on GPU (Nvidia Tesla P100).
 
-patch_size | batch_size | time(seconds)
-:--------: | :--------: | :-------:
-    64     | 64         |  8.96
-    64     | 128        | 10.50
-    64     | 256        | 19.15
-    64     | 512        | 36.98
-    64     | 1024       | 72.81
+|patch_size|batch_size| time(seconds)|
+|:--------:|:--------:|:------------:|
+|    64    | 64       |  8.96        |
+|    64    | 128      | 10.50        |
+|    64    | 256      | 19.15        |
+|    64    | 512      | 36.98        |
+|    64    | 1024     | 72.81        |
 
-patch_size | batch_size | time(seconds)
-:--------: | :--------: | :-------:
-    32     | 64         |  5.93
-    32     | 128        |  4.21
-    32     | 256        |  5.67
-    32     | 512        |  9.12
-    32     | 1024       | 17.26
+|patch_size|batch_size| time(seconds)|
+|:--------:|:--------:|:------------:|
+|    32    | 64       |  5.93        |
+|    32    | 128      |  4.21        |
+|    32    | 256      |  5.67        |
+|    32    | 512      |  9.12        |
+|    32    | 1024     | 17.26        |
 
 ## Bibliography
+
   Please cite :
 ```
   @article{mukundan2017multiple,
     title={Multiple-kernel local-patch descriptor},
     author={Mukundan, Arun and Tolias, Giorgos and Chum, Ond{\v{r}}ej},
     journal={arXiv preprint arXiv:1707.07825},
-    pages={6},
     year={2017}
   }
 
@@ -115,7 +115,6 @@ patch_size | batch_size | time(seconds)
     title={Understanding and improving kernel local descriptors},
     author={Mukundan, Arun and Tolias, Giorgos and Bursuc, Andrei and J{\'e}gou, Herv{\'e} and Chum, Ond{\v{r}}ej},
     journal={International Journal of Computer Vision},
-    pages={1},
     year={2018},
   }
 ```
