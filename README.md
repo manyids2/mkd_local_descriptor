@@ -4,7 +4,7 @@ Implementation of [Understanding and Improving Kernel Local Descriptors](https:/
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
 ## Installation
-`pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.1.tar.gz`
+`pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.2.tar.gz`
 
 ## Usage
 
@@ -85,7 +85,7 @@ Evaluated on the [brown_phototour_revisited benchmark](https://github.com/ducha-
 Times for extraction of 1024 batches on Tesla P100 (16GB).
 
 patch_size | batch_size | time(seconds)
-:--------: | :--------: | :--:
+:--------: | :--------: | :-------:
     64     | 64         |  8.96
     64     | 128        | 10.50
     64     | 256        | 19.15
@@ -93,7 +93,7 @@ patch_size | batch_size | time(seconds)
     64     | 1024       | 72.81
 
 patch_size | batch_size | time(seconds)
-:--------: | :--------: | :--:
+:--------: | :--------: | :-------:
     32     | 64         |  5.93
     32     | 128        |  4.21
     32     | 256        |  5.67

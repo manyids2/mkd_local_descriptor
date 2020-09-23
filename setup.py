@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mkd_local_descriptor",  # Replace with your own username
-    version="0.0.1",
+    version="1.0.2",
     author="Arun Mukundan",
     author_email="arun.mukundan@gmail.com",
     description="A small example package",
