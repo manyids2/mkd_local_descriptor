@@ -3,9 +3,14 @@
 Implementation of [Multiple Kernel Local Patch Descriptor](https://arxiv.org/abs/1707.07825) using PyTorch.
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
+## Installation
+ - [release](https://github.com/manyids2/mkd_local_descriptor/archive/1.0.tar.gz)
+ - `pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.tar.gz`
+
 ## Usage
 
 ```python
+import torch
 import mkd_local_descriptor as mm
 
 # will automatically take model_file trained on liberty, for proper patch_size, else closest.
