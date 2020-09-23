@@ -16,7 +16,7 @@ import mkd_local_descriptor as mm
 # Use model_file trained on PhotoTourism for 64x64 patch_size.
 
 mkd = mm.MKD(dtype='concat',             # 'concat', 'polar', 'cart'.
-             patch_size=64,              # learned models are on 64x64.
+             patch_size=64,
              whitening=None,             # None, 'lw', 'pca', 'pcaws', 'pcawt'.
              training_set='liberty',     # 'liberty', 'notredame', 'yosemite'
              reduce_dims=128,
@@ -32,7 +32,7 @@ print(f'descs: {descs.shape}')
 
 ## Performance
 
-- Trained on 32x32
+- Trained on 32x32, tested on 32x32
 
 ```
   ------------------------------------------------------------------------------
@@ -50,8 +50,7 @@ print(f'descs: {descs.shape}')
   ------------------------------------------------------------------------------
 ```
 
-- Trained on 64x64
-
+- Trained on 64x64, tested on 64x64
 ```
   ------------------------------------------------------------------------------
   Mean Average Precision wrt Lowe SNN ratio criterion on UBC Phototour Revisited
@@ -60,11 +59,29 @@ print(f'descs: {descs.shape}')
   tested  on           yosemite           notredame            liberty
   ------------------------------------------------------------------------------
   Kornia-RootSIFT-64     56.58              47.68               48.20
-  MKD-concat-None-64 57.48  57.48        49.49  49.49        48.29  48.29
-  MKD-concat-lw-64   73.36  73.15        61.90  59.95        61.94  60.35
-  MKD-concat-pca-64  65.58  65.36        55.53  54.60        55.03  54.46
+  MKD-concat-None-64  57.48  57.48        49.49  49.49        48.29  48.29
+  MKD-concat-lw-64    73.36  73.15        61.90  59.95        61.94  60.35
+  MKD-concat-pca-64   65.58  65.36        55.53  54.60        55.03  54.46
   MKD-concat-pcaws-64 67.74  67.16        57.14  55.80        56.13  55.63
   MKD-concat-pcawt-64 69.44  68.96        58.19  56.59        57.41  56.55
+  ------------------------------------------------------------------------------
+```
+
+- Trained on 64x64, tested on 32x32
+
+```
+  ------------------------------------------------------------------------------
+  Mean Average Precision wrt Lowe SNN ratio criterion on UBC Phototour Revisited
+  ------------------------------------------------------------------------------
+  trained on       liberty notredame  liberty yosemite  notredame yosemite
+  tested  on           yosemite           notredame            liberty
+  ------------------------------------------------------------------------------
+  Kornia-RootSIFT-32        58.24              49.07               49.65
+  MKD64-concat-None-32  57.86  57.86        49.93  49.93        48.78  48.78
+  MKD64-concat-lw-32    72.29  71.98        60.90  58.81        60.71  59.13
+  MKD64-concat-pca-32   64.46  64.32        54.82  53.87        54.13  53.62
+  MKD64-concat-pcaws-32 66.59  66.05        56.43  55.21        55.22  54.78
+  MKD64-concat-pcawt-32 68.05  67.61        57.22  55.76        56.27  55.50
   ------------------------------------------------------------------------------
 ```
 
