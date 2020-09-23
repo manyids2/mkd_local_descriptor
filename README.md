@@ -4,34 +4,30 @@ Implementation of [Multiple Kernel Local Patch Descriptor](https://arxiv.org/abs
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
 ## Usage
-``python
+
+```python
 import mkd_local_descriptor as mm
 
-patch_size = 64
-
 # will automatically take model_file trained on liberty, for proper patch_size, else closest.
-# TODO: for now only for 'concat'
 
-mkd = mm.MKD(dtype='concat',
-             patch_size=patch_size,
-             whitening=None,
-             training_set='liberty',
+mkd = mm.MKD(dtype='concat',             # 'concat', 'polar', 'cart'.
+             patch_size=64,              # 64, 32 have learned models.
+             whitening=None,             # None, 'lw', 'pca', 'pcaws', 'pcawt'.
+             training_set='liberty',     # 'liberty', 'notredame', 'yosemite'
              reduce_dims=128,
              do_l2=True,
              do_final_l2=True,
              do_gmask=True,
              device='cpu')
 
-patches = torch.rand(12, 1, patch_size, patch_size)
+patches = torch.rand(12, 1, 64, 64)
 descs = mkd(patches)
 print(f'descs: {descs.shape}')
-
-``
-
+```
 
 ## Bibliography
   Please cite :
-  ``
+```
   @article{mukundan2017multiple,
     title={Multiple-kernel local-patch descriptor},
     author={Mukundan, Arun and Tolias, Giorgos and Chum, Ond{\v{r}}ej},
@@ -47,4 +43,4 @@ print(f'descs: {descs.shape}')
     pages={1},
     year={2018},
   }
-  ``
+```

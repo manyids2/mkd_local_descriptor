@@ -1,2 +1,6 @@
 include mkd_local_descriptor/mkd-concat-32.pkl
 include mkd_local_descriptor/mkd-concat-64.pkl
+include mkd_local_descriptor/mkd-cart-32.pkl
+include mkd_local_descriptor/mkd-cart-64.pkl
+include mkd_local_descriptor/mkd-polar-32.pkl
+include mkd_local_descriptor/mkd-polar-64.pkl
