@@ -4,7 +4,7 @@ Implementation of [Multiple Kernel Local Patch Descriptor](https://arxiv.org/abs
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
 ## Usage
-``python
+```python
 import mkd_local_descriptor as mm
 
 patch_size = 64
@@ -26,8 +26,7 @@ patches = torch.rand(12, 1, patch_size, patch_size)
 descs = mkd(patches)
 print(f'descs: {descs.shape}')
 
-``
-
+```
 
 ## Bibliography
   Please cite :
