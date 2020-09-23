@@ -92,7 +92,6 @@ print(f'descs: {descs.shape}')
     title={Multiple-kernel local-patch descriptor},
     author={Mukundan, Arun and Tolias, Giorgos and Chum, Ond{\v{r}}ej},
     journal={arXiv preprint arXiv:1707.07825},
-    pages={6},
     year={2017}
   }
 
@@ -100,7 +99,6 @@ print(f'descs: {descs.shape}')
     title={Understanding and improving kernel local descriptors},
     author={Mukundan, Arun and Tolias, Giorgos and Bursuc, Andrei and J{\'e}gou, Herv{\'e} and Chum, Ond{\v{r}}ej},
     journal={International Journal of Computer Vision},
-    pages={1},
     year={2018},
   }
 ```
