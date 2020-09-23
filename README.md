@@ -4,6 +4,7 @@ Implementation of [Multiple Kernel Local Patch Descriptor](https://arxiv.org/abs
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
 ## Usage
+
 ```python
 import mkd_local_descriptor as mm
 
@@ -30,7 +31,7 @@ print(f'descs: {descs.shape}')
 
 ## Bibliography
   Please cite :
-  ``
+```
   @article{mukundan2017multiple,
     title={Multiple-kernel local-patch descriptor},
     author={Mukundan, Arun and Tolias, Giorgos and Chum, Ond{\v{r}}ej},
@@ -46,4 +47,4 @@ print(f'descs: {descs.shape}')
     pages={1},
     year={2018},
   }
-  ``
+```
