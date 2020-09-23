@@ -8,8 +8,7 @@ Includes whitening models learned on PhotoTourism dataset, supervised and unsupe
 
 ## Usage
 
-*NOTE* Uses the 'pcawt' version (attenuation) of unsupervised whitening as default as it generalizes better. However, the 'lw' performs
-better on PhotoTourism benchmark.
+*NOTE* Uses the 'pcawt' version (unsupervised whitening with attenuation) as default as it generalizes better. However, the 'lw' (learned whitening) performs better on PhotoTourism benchmark.
 
 ```python
 import torch
