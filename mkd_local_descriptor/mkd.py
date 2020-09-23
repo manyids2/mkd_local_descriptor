@@ -31,11 +31,7 @@ class MKD(nn.Module):
 
         # Use the correct model_file.
         this_dir, _ = os.path.split(__file__)
-        if patch_size in [32, 64]:
-            _patch_size = patch_size
-        else:
-            _patch_size = 32 if abs(patch_size - 32) < abs(patch_size - 64) else 64
-        self.model_file = os.path.join(this_dir, f'mkd-{dtype}-{patch_size}.pkl')
+        self.model_file = os.path.join(this_dir, f'mkd-{dtype}-64.pkl')
 
         self.grads = Gradients(patch_size=patch_size,
                                do_smoothing=True,
