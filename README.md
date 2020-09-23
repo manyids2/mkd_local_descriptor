@@ -1,6 +1,7 @@
 # Multiple Kernel Local Descriptor
 
-Implementation of [Multiple Kernel Local Patch Descriptor](https://arxiv.org/abs/1707.07825) using PyTorch.
+Implementation of [Understanding and Improving Kernel Local Descriptors](https://arxiv.org/abs/1811.11147) using PyTorch.
+
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
 ## Installation
