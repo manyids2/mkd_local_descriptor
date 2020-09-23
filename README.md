@@ -5,7 +5,7 @@ Includes whitening models learned on PhotoTourism dataset, supervised and unsupe
 
 ## Usage
 
-```
+```python
 import mkd_local_descriptor as mm
 
 patch_size = 64
