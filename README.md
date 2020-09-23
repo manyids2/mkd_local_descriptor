@@ -5,8 +5,7 @@ Implementation of [Understanding and Improving Kernel Local Descriptors](https:/
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
 ## Installation
- - [release](https://github.com/manyids2/mkd_local_descriptor/archive/1.0.1.tar.gz)
- - `pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.1.tar.gz`
+`pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.1.tar.gz`
 
 ## Usage
 
