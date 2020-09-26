@@ -3,6 +3,11 @@
 Implementation of [Understanding and Improving Kernel Local Descriptors](https://arxiv.org/abs/1811.11147) using PyTorch.
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
+## *NOTE*
+
+This version of the repository is deprecated in favour of [pure pytorch version](https://github.com/manyids2/mkd_pytorch).
+
+
 ## Installation
 `pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.2.tar.gz`
 
@@ -22,9 +27,9 @@ import mkd_local_descriptor as mm
 
 # Use model_file trained on PhotoTourism for 64x64 patch_size.
 
-mkd = mm.MKD(dtype='concat',             # 'concat', 'polar', 'cart'.
+mkd = mm.MKD(dtype='concat',             # 'concat', 'polar', 'cart'
              patch_size=64,
-             whitening='pcawt',             # None, 'lw', 'pca', 'pcaws', 'pcawt'.
+             whitening='pcawt',          # None, 'lw', 'pca', 'pcaws', 'pcawt'
              training_set='liberty',     # 'liberty', 'notredame', 'yosemite'
              reduce_dims=128,
              do_l2=True,
