@@ -5,7 +5,7 @@ Includes whitening models learned on PhotoTourism dataset, supervised and unsupe
 
 ## *NOTE*
 
-*This version of the repository is deprecated in favour of [pure pytorch version](https://github.com/manyids2/mkd_pytorch).*
+**This version of the repository is deprecated in favour of [pure pytorch version](https://github.com/manyids2/mkd_pytorch).**
 
 
 ## Installation
