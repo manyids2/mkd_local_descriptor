@@ -3,12 +3,8 @@
 Implementation of [Understanding and Improving Kernel Local Descriptors](https://arxiv.org/abs/1811.11147) using PyTorch.
 Includes whitening models learned on PhotoTourism dataset, supervised and unsupervised versions.
 
-## *NOTE*
-
-**This version of the repository is deprecated in favour of [pure pytorch version - https://github.com/manyids2/mkd_pytorch](https://github.com/manyids2/mkd_pytorch).**
-
-
 ## Installation
+
 `pip install https://github.com/manyids2/mkd_local_descriptor/archive/1.0.2.tar.gz`
 
 - Tested with
@@ -19,7 +15,7 @@ Includes whitening models learned on PhotoTourism dataset, supervised and unsupe
 
 ## Usage
 
-*NOTE* Uses the 'pcawt' version (unsupervised whitening with attenuation) as default as it generalizes better. However, the 'lw' (learned whitening) performs better on PhotoTourism benchmark.
+_NOTE_ Uses the 'pcawt' version (unsupervised whitening with attenuation) as default as it generalizes better. However, the 'lw' (learned whitening) performs better on PhotoTourism benchmark.
 
 ```python
 import torch
@@ -55,8 +51,8 @@ Evaluated on the [brown_phototour_revisited benchmark](https://github.com/ducha-
 }
 ```
 
-
 - patch_size = 64
+
 ```
   ------------------------------------------------------------------------------
   Mean Average Precision wrt Lowe SNN ratio criterion on UBC Phototour Revisited
@@ -95,25 +91,26 @@ Evaluated on the [brown_phototour_revisited benchmark](https://github.com/ducha-
 
 Extraction times for 1024 batches on GPU (Nvidia Tesla P100).
 
-|patch_size|batch_size| time(seconds)| ms per patch
-|:--------:|:--------:|:------------:|:-----------:
-|    64    | 64       |  8.96        | 13.67e-2
-|    64    | 128      | 10.50        |  8.01e-2
-|    64    | 256      | 19.15        |  7.30e-2
-|    64    | 512      | 36.98        |  7.05e-2
-|    64    | 1024     | 72.81        |  6.94e-2
+| patch_size | batch_size | time(seconds) | ms per patch |
+| :--------: | :--------: | :-----------: | :----------: |
+|     64     |     64     |     8.96      |   13.67e-2   |
+|     64     |    128     |     10.50     |   8.01e-2    |
+|     64     |    256     |     19.15     |   7.30e-2    |
+|     64     |    512     |     36.98     |   7.05e-2    |
+|     64     |    1024    |     72.81     |   6.94e-2    |
 
-|patch_size|batch_size| time(seconds)| ms per patch
-|:--------:|:--------:|:------------:|:---------:
-|    32    | 64       |  5.93        |  9.04e-2
-|    32    | 128      |  4.21        |  3.21e-2
-|    32    | 256      |  5.67        |  2.16e-2
-|    32    | 512      |  9.12        |  1.73e-2
-|    32    | 1024     | 17.26        |  1.64e-2
+| patch_size | batch_size | time(seconds) | ms per patch |
+| :--------: | :--------: | :-----------: | :----------: |
+|     32     |     64     |     5.93      |   9.04e-2    |
+|     32     |    128     |     4.21      |   3.21e-2    |
+|     32     |    256     |     5.67      |   2.16e-2    |
+|     32     |    512     |     9.12      |   1.73e-2    |
+|     32     |    1024    |     17.26     |   1.64e-2    |
 
 ## Bibliography
 
-  Please cite :
+Please cite :
+
 ```
   @article{mukundan2017multiple,
     title={Multiple-kernel local-patch descriptor},
