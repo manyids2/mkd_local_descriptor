@@ -33,7 +33,7 @@ mkd = mm.MKD(dtype='concat',             # 'concat', 'polar', 'cart'
              do_gmask=True,
              device='cpu')
 
-patches = torch.rand(12, 1, 64, 64)
+patches = torch.rand(12, 1, 64, 64)  # create batch of 12 random patches
 descs = mkd(patches)
 print(f'descs: {descs.shape}')
 ```
